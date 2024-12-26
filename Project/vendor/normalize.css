@@ -1,0 +1,335 @@
+/**
+ * Устанавливает свойство display в none для скрытых элементов в браузерах IE 10+.
+ */
+
+ [hidden] {
+  display: none;
+}
+
+/**
+ * Обеспечивает скрытие элементов <template> в IE 10 и выше.
+ */
+
+template {
+  display: none;
+}
+
+/* Документ
+   ========================================================================== */
+
+/**
+ * Исправляет консистентность межстрочного интервала во всех браузерах.
+ * Предотвращает изменения размера шрифта при смене ориентации на iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Секции
+   ========================================================================== */
+
+/**
+ * Убирает отступы в элементах body во всех браузерах.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Обеспечивает правильное отображение элемента <main> в старых версиях Internet Explorer.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Исправляет размер шрифта и отступы для элементов <h1> в контексте секций и статей в современных браузерах.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Группировка контента
+   ========================================================================== */
+
+/**
+ * Исправляет размер коробки для элемента <hr> в Firefox.
+ * Обеспечивает видимость переполнения в старых версиях IE и Edge.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * Исправляет проблемы с наследованием шрифта для элементов с предварительно форматированным текстом в браузерах.
+ * Исправляет странное масштабирование шрифта во всех браузерах.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Семантика текста
+   ========================================================================== */
+
+/**
+ * Убирает фоновый цвет для активных ссылок в Internet Explorer 10 и выше.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Убирает нижнюю границу для элементов <abbr> в Chrome 57 и более старых версиях.
+ * Исправляет текстовое украшение для Chrome, Edge, Internet Explorer, Opera и Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Устанавливает более жирный шрифт для элементов <b> и <strong> в Chrome, Edge и Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Исправляет наследование шрифта для встроенных текстовых элементов, таких как <code>, <kbd> и <samp>.
+ * Исправляет масштабирование шрифта во всех браузерах.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Регулирует размер шрифта для элементов <small> во всех браузерах.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Исправляет размер шрифта и межстрочный интервал для элементов <sub> и <sup> во всех браузерах.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Встроенный контент
+   ========================================================================== */
+
+/**
+ * Убирает стиль границы для изображений внутри ссылок в Internet Explorer 10 и выше.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Формы
+   ========================================================================== */
+
+/**
+ * 1. Обеспечивает консистентные шрифты для элементов форм во всех браузерах.
+ * 2. Убирает отступы для элементов формы в Firefox и Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Обеспечивает видимость переполнения в IE и Edge для элементов button и input.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Предотвращает наследование свойства text-transform для элементов button и select в Edge, Firefox и Internet Explorer.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Исправляет отображение кнопок на iOS и Safari для типов кнопок в элементах input.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+ -webkit-appearance: button;
+}
+
+/**
+ * Убирает внутренние границы и отступы для элементов button в Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Восстанавливает стили фокуса для кнопок в Firefox.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Исправляет отступы для элементов fieldset в Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * Исправляет обтекание текста и проблемы с отступами для элементов legend в Edge, IE и Safari.
+ * Убирает лишние отступы для элементов fieldset во всех браузерах.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Исправляет вертикальное выравнивание для элементов progress в современных браузерах.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Обеспечивает корректное поведение переполнения для элементов textarea.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Исправляет отступы для типов input checkbox и radio в IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Исправляет стиль курсора для кнопок увеличения и уменьшения значений для input[type="number"] в Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Исправляет внешний вид и стиль outline для input[type="search"] в Chrome и Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Убирает внутренние отступы для input[type="search"] в Chrome и Safari на macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Исправляет стиль наследования для кнопок загрузки файлов в Safari и iOS.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Интерактивные элементы
+   ========================================================================== */
+
+/**
+ * Обеспечивает правильное отображение элемента details в современных браузерах.
+ */
+
+details {
+  display: block;
+}
+
+/**
+ * Устанавливает display в list-item для элементов summary во всех браузерах.
+ */
+
+summary {
+  display: list-item;
+}

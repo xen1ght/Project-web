@@ -1,0 +1,18 @@
+.footer__links {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 18px;
+  font-weight: 400;
+  gap: 18px;
+}
+
+@media screen and (max-width: 704px) {
+  .footer__links {
+    flex-direction: column;
+    line-height: 24px;
+    gap: 32px;
+  }
+}
